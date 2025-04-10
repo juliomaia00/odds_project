@@ -1,3 +1,7 @@
+#busca os dados brutos diretamente da api e manda para o s3 em formato de JSON
+
+
+
 import requests, json
 from datetime import datetime
 
@@ -30,4 +34,4 @@ with open(local_file_path, "w") as f:
 
 dbutils.fs.cp(f"file:{local_file_path}", s3_target_path)
 
-print(f"Arquivo enviado com sucesso para: {s3_target_path}")
+print("Arquivo enviado com sucesso")

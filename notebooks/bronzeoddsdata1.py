@@ -1,6 +1,7 @@
+# Lê  JSON salvo no S3 (camada Bronze Raw), realiza o flatten nos dados aninhados (explode nos bookmakers) e transforma em delta 
+
 from pyspark.sql.functions import explode, col
 
-# Lê  JSON salvo no S3 (camada Bronze Raw)
 df = spark.read.option("multiline", "true").json(bronze_raw_path)
 
 flat_df = df.withColumn("bookmakers", explode(col("bookmakers")))

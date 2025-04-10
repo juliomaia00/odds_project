@@ -1,3 +1,5 @@
+## filtra colunas relevantes que usei para as metricas na gold, padroniza formatos e prepara os dados para análises
+
 from pyspark.sql.functions import explode, col
 
 df = spark.read.format("delta").load(bronze_flat_path)
