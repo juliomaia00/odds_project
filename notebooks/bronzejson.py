@@ -1,4 +1,5 @@
 #busca os dados brutos diretamente da api e manda para o s3 em formato de JSON
+#dados recolhidos do dia 10/04/2025
 
 
 
