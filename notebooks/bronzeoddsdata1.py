@@ -1,4 +1,4 @@
-# Lê  JSON salvo no S3 (camada Bronze Raw), realiza o flatten nos dados aninhados (explode nos bookmakers) e transforma em delta 
+# Lê  JSON salvo no S3 (camada Bronze Raw), explode nos bookmakers para ajustar os dados aninhados e transforma em delta 
 
 from pyspark.sql.functions import explode, col
 
